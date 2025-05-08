@@ -434,7 +434,7 @@ function animateElements() {
   });
   
   gsap.from('.cta-btn', {
-    opacity: 0,
+    opacity: 100,
     y: 20,
     duration: 1,
     delay: 0.9,
