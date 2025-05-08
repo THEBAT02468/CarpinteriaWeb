@@ -1,150 +1,190 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Carpintería Artesanal - Muebles a medida y productos de madera de alta calidad">
-  <title>Madera Noble | Carpintería Artesanal</title>
-  <link rel="stylesheet" href="/src/style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@400;600&display=swap" rel="stylesheet">
-</head>
-<body>
-  <header class="header">
-    <div class="container">
-      <h1 class="logo">Madera Noble</h1>
-      <button class="menu-toggle" aria-label="Abrir menú">☰</button>
-      <nav class="nav">
-        <ul>
-          <li><a href="#" class="nav-link active">Inicio</a></li>
-          <li><a href="#products" class="nav-link">Productos</a></li>
-          <li><a href="#about" class="nav-link">Nosotros</a></li>
-          <li><a href="#contact" class="nav-link">Contacto</a></li>
-          <li><a href="#" class="cart-btn nav-link">Carrito <span class="cart-count">0</span></a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <main class="main">
-    <section class="hero">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Carpintería Artesanal - Muebles a medida y productos de madera de alta calidad"
+    />
+    <title>Madera Noble | Carpintería Artesanal</title>
+    <link rel="stylesheet" href="/src/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header">
       <div class="container">
-        <h2>Artesanía en Madera</h2>
-        <p>Muebles únicos fabricados con pasión y tradición</p>
-        <button class="cta-btn">Ver Catálogo</button>
+        <h1 class="logo">Madera Noble</h1>
+        <button class="menu-toggle" aria-label="Abrir menú">☰</button>
+        <nav class="nav">
+          <ul>
+            <li><a href="#" class="nav-link active">Inicio</a></li>
+            <li><a href="#products" class="nav-link">Productos</a></li>
+            <li><a href="#about" class="nav-link">Nosotros</a></li>
+            <li><a href="#contact" class="nav-link">Contacto</a></li>
+            <li>
+              <a href="#" class="cart-btn nav-link"
+                >Carrito <span class="cart-count">0</span></a
+              >
+            </li>
+          </ul>
+        </nav>
       </div>
-    </section>
+    </header>
 
-    <section id="about" class="about section-padding">
+    <main class="main">
+      <section class="hero">
+        <div class="container">
+          <h2>Artesanía en Madera</h2>
+          <p>Muebles únicos fabricados con pasión y tradición</p>
+          <button class="cta-btn">Ver Catálogo</button>
+        </div>
+      </section>
+
+      <section id="about" class="about section-padding">
+        <div class="container">
+          <h2 class="section-title">Nuestra Tradición</h2>
+          <div class="about-content">
+            <div class="about-text">
+              <p>
+                Con más de 20 años de experiencia, en Madera Noble combinamos
+                técnicas tradicionales con diseño contemporáneo para crear
+                piezas únicas que perduran en el tiempo.
+              </p>
+              <p>
+                Cada producto es fabricado artesanalmente con maderas
+                seleccionadas y tratadas para garantizar durabilidad y belleza.
+              </p>
+              <ul class="features-list">
+                <li>✅ Madera 100% natural</li>
+                <li>✅ Acabados artesanales</li>
+                <li>✅ Diseños personalizados</li>
+                <li>✅ Garantía de por vida</li>
+              </ul>
+            </div>
+            <div class="about-image">
+              <img
+                src="https://www.mndelgolfo.com/blog/wp-content/uploads/2018/03/taller-de-carpinteria.jpg"
+                alt="Taller de carpintería"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="products" class="products section-padding">
+        <div class="container">
+          <h2 class="section-title">Nuestros Productos</h2>
+          <div class="product-filters">
+            <button class="filter-btn active" data-filter="all">Todos</button>
+            <button class="filter-btn" data-filter="muebles">Muebles</button>
+            <button class="filter-btn" data-filter="decoracion">
+              Decoración
+            </button>
+            <button class="filter-btn" data-filter="exteriores">
+              Exteriores
+            </button>
+          </div>
+          <div class="product-grid" id="productGrid"></div>
+        </div>
+      </section>
+
+      <section id="contact" class="contact section-padding">
+        <div class="container">
+          <h2 class="section-title-1">Contacto</h2>
+          <div class="contact-container">
+            <form class="contact-form" id="contactForm">
+              <div class="form-group">
+                <input type="text" id="name" placeholder="Nombre" required />
+              </div>
+              <div class="form-group">
+                <input type="email" id="email" placeholder="Email" required />
+              </div>
+              <div class="form-group">
+                <textarea
+                  id="message"
+                  placeholder="Cuéntenos sobre su proyecto..."
+                  required
+                ></textarea>
+              </div>
+              <button type="submit" class="cta-btn">Enviar Mensaje</button>
+            </form>
+            <div class="contact-info">
+              <h3>Visítanos</h3>
+              <p>Av. del Bosque 1234, Taller 5</p>
+              <p>Lunes a Viernes: 9:00 - 18:00</p>
+              <p>Sábados: 10:00 - 14:00</p>
+              <p>Teléfono: +56 9 1234 5678</p>
+              <div class="social-links">
+                <a href="#" aria-label="Facebook"
+                  ><img src="assets/icons/facebook.png" alt="Facebook"
+                /></a>
+                <a href="#" aria-label="Instagram"
+                  ><img
+                    src="assets/icons/logotipo-de-instagram.png"
+                    alt="Instagram"
+                /></a>
+                <a href="#" aria-label="WhatsApp"
+                  ><img src="assets/icons/whatsapp.png" alt="WhatsApp"
+                /></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
       <div class="container">
-        <h2 class="section-title">Nuestra Tradición</h2>
-        <div class="about-content">
-          <div class="about-text">
-            <p>Con más de 20 años de experiencia, en Madera Noble combinamos técnicas tradicionales con diseño contemporáneo para crear piezas únicas que perduran en el tiempo.</p>
-            <p>Cada producto es fabricado artesanalmente con maderas seleccionadas y tratadas para garantizar durabilidad y belleza.</p>
-            <ul class="features-list">
-              <li>✅ Madera 100% natural</li>
-              <li>✅ Acabados artesanales</li>
-              <li>✅ Diseños personalizados</li>
-              <li>✅ Garantía de por vida</li>
+        <div class="footer-content">
+          <div class="footer-logo">
+            <h3>Madera Noble</h3>
+            <p>Carpintería Artesanal</p>
+          </div>
+          <div class="footer-links">
+            <h4>Enlaces</h4>
+            <ul>
+              <li><a href="#">Inicio</a></li>
+              <li><a href="#products">Productos</a></li>
+              <li><a href="#about">Nosotros</a></li>
+              <li><a href="#contact">Contacto</a></li>
             </ul>
           </div>
-          <div class="about-image">
-            <img src="https://www.mndelgolfo.com/blog/wp-content/uploads/2018/03/taller-de-carpinteria.jpg" alt="Taller de carpintería" loading="lazy">
+          <div class="footer-legal">
+            <h4>Legal</h4>
+            <ul>
+              <li><a href="#">Términos y condiciones</a></li>
+              <li><a href="#">Política de privacidad</a></li>
+            </ul>
           </div>
         </div>
+        <p class="copyright">
+          &copy; <span id="current-year"></span> Madera Noble. Todos los
+          derechos reservados.
+        </p>
       </div>
-    </section>
+    </footer>
 
-    <section id="products" class="products section-padding">
-      <div class="container">
-        <h2 class="section-title">Nuestros Productos</h2>
-        <div class="product-filters">
-          <button class="filter-btn active" data-filter="all">Todos</button>
-          <button class="filter-btn" data-filter="muebles">Muebles</button>
-          <button class="filter-btn" data-filter="decoracion">Decoración</button>
-          <button class="filter-btn" data-filter="exteriores">Exteriores</button>
+    <div class="cart-modal" id="cartModal">
+      <div class="cart-content">
+        <h3>Tu Carrito</h3>
+        <div class="cart-items" id="cartItems"></div>
+        <div class="cart-total">
+          <p>Total: <span id="cartTotal">$0.00</span></p>
         </div>
-        <div class="product-grid" id="productGrid"></div>
+        <button class="close-cart" aria-label="Cerrar carrito">×</button>
+        <button class="checkout-btn">Proceder al Pago</button>
       </div>
-    </section>
-
-    <section id="contact" class="contact section-padding">
-      <div class="container">
-        <h2 class="section-title-1">Contacto</h2>
-        <div class="contact-container">
-          <form class="contact-form" id="contactForm">
-            <div class="form-group">
-              <input type="text" id="name" placeholder="Nombre" required>
-            </div>
-            <div class="form-group">
-              <input type="email" id="email" placeholder="Email" required>
-            </div>
-            <div class="form-group">
-              <textarea id="message" placeholder="Cuéntenos sobre su proyecto..." required></textarea>
-            </div>
-            <button type="submit" class="cta-btn">Enviar Mensaje</button>
-          </form>
-          <div class="contact-info">
-            <h3>Visítanos</h3>
-            <p>Av. del Bosque 1234, Taller 5</p>
-            <p>Lunes a Viernes: 9:00 - 18:00</p>
-            <p>Sábados: 10:00 - 14:00</p>
-            <p>Teléfono: +56 9 1234 5678</p>
-            <div class="social-links">
-              <a href="#" aria-label="Facebook"><img src="assets/icons/facebook.png" alt="Facebook"></a>
-              <a href="#" aria-label="Instagram"><img src="assets/icons/logotipo-de-instagram.png" alt="Instagram"></a>
-              <a href="#" aria-label="WhatsApp"><img src="assets/icons/whatsapp.png" alt="WhatsApp"></a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-content">
-        <div class="footer-logo">
-          <h3>Madera Noble</h3>
-          <p>Carpintería Artesanal</p>
-        </div>
-        <div class="footer-links">
-          <h4>Enlaces</h4>
-          <ul>
-            <li><a href="#">Inicio</a></li>
-            <li><a href="#products">Productos</a></li>
-            <li><a href="#about">Nosotros</a></li>
-            <li><a href="#contact">Contacto</a></li>
-          </ul>
-        </div>
-        <div class="footer-legal">
-          <h4>Legal</h4>
-          <ul>
-            <li><a href="#">Términos y condiciones</a></li>
-            <li><a href="#">Política de privacidad</a></li>
-          </ul>
-        </div>
-      </div>
-      <p class="copyright">&copy; <span id="current-year"></span> Madera Noble. Todos los derechos reservados.</p>
     </div>
-  </footer>
 
-  <div class="cart-modal" id="cartModal">
-    <div class="cart-content">
-      <h3>Tu Carrito</h3>
-      <div class="cart-items" id="cartItems"></div>
-      <div class="cart-total">
-        <p>Total: <span id="cartTotal">$0.00</span></p>
-      </div>
-      <button class="close-cart" aria-label="Cerrar carrito">×</button>
-      <button class="checkout-btn">Proceder al Pago</button>
-    </div>
-  </div>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
-  <script src="/src/main.js"></script>
-</body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <script type="module" src="/src/main.js"></script>
+  </body>
 </html>
